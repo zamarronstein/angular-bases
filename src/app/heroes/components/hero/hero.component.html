@@ -1,0 +1,32 @@
+<h1>{{getName}}</h1>
+
+<dl>
+  <dt>Nombre</dt>
+  <dd>{{getName}}</dd>
+
+  <dt>Edad</dt>
+  <dd>{{getAge}}</dd>
+
+  <dt>Método</dt>
+  <dd>{{getDescription()}}</dd>
+
+  <dt>Capitalized</dt>
+  <dd>{{getCapitalized}}</dd>
+</dl>
+
+<button
+  *ngIf="getName === 'ironman'"
+  class="btn btn-primary mx-2"
+  (click)="changeName()"
+  >Cambiar nombre</button>
+<button
+  *ngIf="getAge === 39"
+  class="btn btn-primary mx-2"
+  (click)="changeAge()"
+  >Cambiar edad</button>
+
+
+<button
+  class="btn btn-primary mx-2"
+  (click)="reset()"
+  >Reset</button>
